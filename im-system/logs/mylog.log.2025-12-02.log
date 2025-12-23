@@ -1,0 +1,40 @@
+2025-12-02 14:05:02 -HV000001: Hibernate Validator 6.2.5.Final
+2025-12-02 14:05:02 -Starting ServiceApplication using Java 11.0.11 on LAPTOP-9LMH2RQN with PID 33432 (E:\JAVAnew\work\IMCommunicateSystem\im-system\service\target\classes started by Fe in E:\JAVAnew\work\IMCommunicateSystem\im-system)
+2025-12-02 14:05:02 -The following 1 profile is active: "dev"
+2025-12-02 14:05:03 -Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-02 14:05:03 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-02 14:05:03 -Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2025-12-02 14:05:03 -Tomcat initialized with port(s): 8000 (http)
+2025-12-02 14:05:03 -Initializing ProtocolHandler ["http-nio-8000"]
+2025-12-02 14:05:03 -Starting service [Tomcat]
+2025-12-02 14:05:03 -Starting Servlet engine: [Apache Tomcat/9.0.75]
+2025-12-02 14:05:04 -Initializing Spring embedded WebApplicationContext
+2025-12-02 14:05:04 -Root WebApplicationContext: initialization completed in 2055 ms
+2025-12-02 14:05:05 -Starting ProtocolHandler ["http-nio-8000"]
+2025-12-02 14:05:05 -Tomcat started on port(s): 8000 (http) with context path ''
+2025-12-02 14:05:05 -Attempting to connect to: [localhost:5672]
+2025-12-02 14:05:05 -Created new connection: rabbitConnectionFactory#3193e21d:0/SimpleConnection@28f8ce2e [delegate=amqp://guest@127.0.0.1:5672/, localPort= 60502]
+2025-12-02 14:05:05 -Started ServiceApplication in 4.178 seconds (JVM running for 5.146)
+2025-12-02 14:07:31 -Waiting for workers to finish.
+2025-12-02 14:07:32 -Successfully waited for workers to finish.
+2025-12-02 14:07:32 -Shutdown ignored - container is already stopped
+2025-12-02 22:23:30 -HV000001: Hibernate Validator 6.2.5.Final
+2025-12-02 22:23:30 -Starting ServiceApplication using Java 11.0.11 on LAPTOP-9LMH2RQN with PID 39288 (E:\JAVAnew\work\IMCommunicateSystem\im-system\service\target\classes started by Fe in E:\JAVAnew\work\IMCommunicateSystem\im-system)
+2025-12-02 22:23:30 -The following 1 profile is active: "dev"
+2025-12-02 22:23:31 -Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-02 22:23:31 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-02 22:23:31 -Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+2025-12-02 22:23:32 -Tomcat initialized with port(s): 8000 (http)
+2025-12-02 22:23:32 -Initializing ProtocolHandler ["http-nio-8000"]
+2025-12-02 22:23:32 -Starting service [Tomcat]
+2025-12-02 22:23:32 -Starting Servlet engine: [Apache Tomcat/9.0.75]
+2025-12-02 22:23:32 -Initializing Spring embedded WebApplicationContext
+2025-12-02 22:23:32 -Root WebApplicationContext: initialization completed in 1593 ms
+2025-12-02 22:23:34 -Starting ProtocolHandler ["http-nio-8000"]
+2025-12-02 22:23:34 -Tomcat started on port(s): 8000 (http) with context path ''
+2025-12-02 22:23:34 -Attempting to connect to: [localhost:5672]
+2025-12-02 22:23:34 -Created new connection: rabbitConnectionFactory#51132514:0/SimpleConnection@4af0c50 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 62162]
+2025-12-02 22:23:34 -Started ServiceApplication in 3.653 seconds (JVM running for 4.546)
+2025-12-02 22:23:42 -Waiting for workers to finish.
+2025-12-02 22:23:43 -Successfully waited for workers to finish.
+2025-12-02 22:23:43 -Shutdown ignored - container is already stopped

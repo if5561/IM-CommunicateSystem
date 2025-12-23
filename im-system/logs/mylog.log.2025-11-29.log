@@ -1,0 +1,186 @@
+2025-11-29 11:30:36 -HV000001: Hibernate Validator 6.2.5.Final
+2025-11-29 11:30:36 -Starting ServiceApplication using Java 11.0.11 on LAPTOP-9LMH2RQN with PID 31324 (E:\JAVAnew\work\IMCommunicateSystem\im-system\service\target\classes started by Fe in E:\JAVAnew\work\IMCommunicateSystem\im-system)
+2025-11-29 11:30:36 -The following 1 profile is active: "dev"
+2025-11-29 11:30:37 -Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-29 11:30:37 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-11-29 11:30:37 -Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2025-11-29 11:30:38 -Tomcat initialized with port(s): 8000 (http)
+2025-11-29 11:30:38 -Initializing ProtocolHandler ["http-nio-8000"]
+2025-11-29 11:30:38 -Starting service [Tomcat]
+2025-11-29 11:30:38 -Starting Servlet engine: [Apache Tomcat/9.0.75]
+2025-11-29 11:30:38 -Initializing Spring embedded WebApplicationContext
+2025-11-29 11:30:38 -Root WebApplicationContext: initialization completed in 1438 ms
+2025-11-29 11:30:38 -Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'httpClientConnectionManager' defined in class path resource [com/lld/im/common/config/GlobalHttpClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.http.impl.conn.PoolingHttpClientConnectionManager]: Factory method 'getPoolingHttpClientConnectionManager' threw exception; nested exception is java.lang.NullPointerException
+2025-11-29 11:30:38 -Stopping service [Tomcat]
+2025-11-29 11:30:38 -
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-11-29 11:30:38 -Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'httpClientConnectionManager' defined in class path resource [com/lld/im/common/config/GlobalHttpClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.http.impl.conn.PoolingHttpClientConnectionManager]: Factory method 'getPoolingHttpClientConnectionManager' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.lld.im.service.ServiceApplication.main(ServiceApplication.java:12)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.http.impl.conn.PoolingHttpClientConnectionManager]: Factory method 'getPoolingHttpClientConnectionManager' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 19 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at com.lld.im.common.config.GlobalHttpClientConfig.getManager(GlobalHttpClientConfig.java:36)
+	at com.lld.im.common.config.GlobalHttpClientConfig.getPoolingHttpClientConnectionManager(GlobalHttpClientConfig.java:28)
+	at com.lld.im.common.config.GlobalHttpClientConfig$$EnhancerBySpringCGLIB$$e82d184.CGLIB$getPoolingHttpClientConnectionManager$17(<generated>)
+	at com.lld.im.common.config.GlobalHttpClientConfig$$EnhancerBySpringCGLIB$$e82d184$$FastClassBySpringCGLIB$$d064d4c3.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at com.lld.im.common.config.GlobalHttpClientConfig$$EnhancerBySpringCGLIB$$e82d184.getPoolingHttpClientConnectionManager(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 20 common frames omitted
+2025-11-29 11:31:59 -HV000001: Hibernate Validator 6.2.5.Final
+2025-11-29 11:31:59 -Starting ServiceApplication using Java 11.0.11 on LAPTOP-9LMH2RQN with PID 25444 (E:\JAVAnew\work\IMCommunicateSystem\im-system\service\target\classes started by Fe in E:\JAVAnew\work\IMCommunicateSystem\im-system)
+2025-11-29 11:31:59 -The following 1 profile is active: "dev"
+2025-11-29 11:31:59 -Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-29 11:31:59 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-11-29 11:31:59 -Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2025-11-29 11:32:00 -Tomcat initialized with port(s): 8000 (http)
+2025-11-29 11:32:00 -Initializing ProtocolHandler ["http-nio-8000"]
+2025-11-29 11:32:00 -Starting service [Tomcat]
+2025-11-29 11:32:00 -Starting Servlet engine: [Apache Tomcat/9.0.75]
+2025-11-29 11:32:00 -Initializing Spring embedded WebApplicationContext
+2025-11-29 11:32:00 -Root WebApplicationContext: initialization completed in 683 ms
+2025-11-29 11:32:00 -Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'httpClientConnectionManager' defined in class path resource [com/lld/im/common/config/GlobalHttpClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.http.impl.conn.PoolingHttpClientConnectionManager]: Factory method 'getPoolingHttpClientConnectionManager' threw exception; nested exception is java.lang.NullPointerException
+2025-11-29 11:32:00 -Stopping service [Tomcat]
+2025-11-29 11:32:00 -
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-11-29 11:32:00 -Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'httpClientConnectionManager' defined in class path resource [com/lld/im/common/config/GlobalHttpClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.http.impl.conn.PoolingHttpClientConnectionManager]: Factory method 'getPoolingHttpClientConnectionManager' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.lld.im.service.ServiceApplication.main(ServiceApplication.java:12)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.http.impl.conn.PoolingHttpClientConnectionManager]: Factory method 'getPoolingHttpClientConnectionManager' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 19 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at com.lld.im.common.config.GlobalHttpClientConfig.getManager(GlobalHttpClientConfig.java:36)
+	at com.lld.im.common.config.GlobalHttpClientConfig.getPoolingHttpClientConnectionManager(GlobalHttpClientConfig.java:28)
+	at com.lld.im.common.config.GlobalHttpClientConfig$$EnhancerBySpringCGLIB$$1be96d16.CGLIB$getPoolingHttpClientConnectionManager$12(<generated>)
+	at com.lld.im.common.config.GlobalHttpClientConfig$$EnhancerBySpringCGLIB$$1be96d16$$FastClassBySpringCGLIB$$24ea7edd.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at com.lld.im.common.config.GlobalHttpClientConfig$$EnhancerBySpringCGLIB$$1be96d16.getPoolingHttpClientConnectionManager(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 20 common frames omitted
+2025-11-29 11:32:17 -HV000001: Hibernate Validator 6.2.5.Final
+2025-11-29 11:32:17 -Starting ServiceApplication using Java 11.0.11 on LAPTOP-9LMH2RQN with PID 10332 (E:\JAVAnew\work\IMCommunicateSystem\im-system\service\target\classes started by Fe in E:\JAVAnew\work\IMCommunicateSystem\im-system)
+2025-11-29 11:32:17 -The following 1 profile is active: "dev"
+2025-11-29 11:32:18 -Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-29 11:32:18 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-11-29 11:32:18 -Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2025-11-29 11:32:18 -Tomcat initialized with port(s): 8000 (http)
+2025-11-29 11:32:18 -Initializing ProtocolHandler ["http-nio-8000"]
+2025-11-29 11:32:18 -Starting service [Tomcat]
+2025-11-29 11:32:18 -Starting Servlet engine: [Apache Tomcat/9.0.75]
+2025-11-29 11:32:18 -Initializing Spring embedded WebApplicationContext
+2025-11-29 11:32:18 -Root WebApplicationContext: initialization completed in 656 ms
+2025-11-29 11:32:19 -Starting ProtocolHandler ["http-nio-8000"]
+2025-11-29 11:32:19 -Tomcat started on port(s): 8000 (http) with context path ''
+2025-11-29 11:32:19 -Started ServiceApplication in 2.404 seconds (JVM running for 2.907)
+2025-11-29 11:35:24 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-29 11:35:24 -Initializing Servlet 'dispatcherServlet'
+2025-11-29 11:35:24 -Completed initialization in 2 ms
+2025-11-29 11:36:14 -HV000001: Hibernate Validator 6.2.5.Final
+2025-11-29 11:36:14 -Starting ServiceApplication using Java 11.0.11 on LAPTOP-9LMH2RQN with PID 9668 (E:\JAVAnew\work\IMCommunicateSystem\im-system\service\target\classes started by Fe in E:\JAVAnew\work\IMCommunicateSystem\im-system)
+2025-11-29 11:36:14 -The following 1 profile is active: "dev"
+2025-11-29 11:36:14 -Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-29 11:36:14 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-11-29 11:36:14 -Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2025-11-29 11:36:14 -Tomcat initialized with port(s): 8000 (http)
+2025-11-29 11:36:14 -Initializing ProtocolHandler ["http-nio-8000"]
+2025-11-29 11:36:14 -Starting service [Tomcat]
+2025-11-29 11:36:14 -Starting Servlet engine: [Apache Tomcat/9.0.75]
+2025-11-29 11:36:14 -Initializing Spring embedded WebApplicationContext
+2025-11-29 11:36:14 -Root WebApplicationContext: initialization completed in 691 ms
+2025-11-29 11:36:16 -Starting ProtocolHandler ["http-nio-8000"]
+2025-11-29 11:36:16 -Tomcat started on port(s): 8000 (http) with context path ''
+2025-11-29 11:36:16 -Started ServiceApplication in 2.321 seconds (JVM running for 2.834)
+2025-11-29 11:36:19 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-29 11:36:19 -Initializing Servlet 'dispatcherServlet'
+2025-11-29 11:36:19 -Completed initialization in 1 ms
+2025-11-29 11:38:13 -HV000001: Hibernate Validator 6.2.5.Final
+2025-11-29 11:38:13 -Starting ServiceApplication using Java 11.0.11 on LAPTOP-9LMH2RQN with PID 17680 (E:\JAVAnew\work\IMCommunicateSystem\im-system\service\target\classes started by Fe in E:\JAVAnew\work\IMCommunicateSystem\im-system)
+2025-11-29 11:38:13 -The following 1 profile is active: "dev"
+2025-11-29 11:38:13 -Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-29 11:38:13 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-11-29 11:38:13 -Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2025-11-29 11:38:13 -Tomcat initialized with port(s): 8000 (http)
+2025-11-29 11:38:13 -Initializing ProtocolHandler ["http-nio-8000"]
+2025-11-29 11:38:13 -Starting service [Tomcat]
+2025-11-29 11:38:13 -Starting Servlet engine: [Apache Tomcat/9.0.75]
+2025-11-29 11:38:14 -Initializing Spring embedded WebApplicationContext
+2025-11-29 11:38:14 -Root WebApplicationContext: initialization completed in 652 ms
+2025-11-29 11:38:15 -Starting ProtocolHandler ["http-nio-8000"]
+2025-11-29 11:38:15 -Tomcat started on port(s): 8000 (http) with context path ''
+2025-11-29 11:38:15 -Started ServiceApplication in 2.368 seconds (JVM running for 2.845)
+2025-11-29 11:38:21 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-29 11:38:21 -Initializing Servlet 'dispatcherServlet'
+2025-11-29 11:38:21 -Completed initialization in 1 ms
+2025-11-29 13:08:55 -HV000001: Hibernate Validator 6.2.5.Final
+2025-11-29 13:08:55 -Starting ServiceApplication using Java 11.0.11 on LAPTOP-9LMH2RQN with PID 16940 (E:\JAVAnew\work\IMCommunicateSystem\im-system\service\target\classes started by Fe in E:\JAVAnew\work\IMCommunicateSystem\im-system)
+2025-11-29 13:08:55 -The following 1 profile is active: "dev"
+2025-11-29 13:08:56 -Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-29 13:08:56 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-11-29 13:08:56 -Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2025-11-29 13:08:57 -Tomcat initialized with port(s): 8000 (http)
+2025-11-29 13:08:57 -Initializing ProtocolHandler ["http-nio-8000"]
+2025-11-29 13:08:57 -Starting service [Tomcat]
+2025-11-29 13:08:57 -Starting Servlet engine: [Apache Tomcat/9.0.75]
+2025-11-29 13:08:57 -Initializing Spring embedded WebApplicationContext
+2025-11-29 13:08:57 -Root WebApplicationContext: initialization completed in 1413 ms
+2025-11-29 13:08:58 -Starting ProtocolHandler ["http-nio-8000"]
+2025-11-29 13:08:58 -Tomcat started on port(s): 8000 (http) with context path ''
+2025-11-29 13:08:58 -Started ServiceApplication in 3.116 seconds (JVM running for 3.848)
+2025-11-29 13:09:07 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-29 13:09:07 -Initializing Servlet 'dispatcherServlet'
+2025-11-29 13:09:07 -Completed initialization in 0 ms

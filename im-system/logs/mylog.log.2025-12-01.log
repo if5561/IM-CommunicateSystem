@@ -1,0 +1,103 @@
+2025-12-01 16:27:42 -HV000001: Hibernate Validator 6.2.5.Final
+2025-12-01 16:27:42 -Starting ServiceApplication using Java 11.0.11 on LAPTOP-9LMH2RQN with PID 50644 (E:\JAVAnew\work\IMCommunicateSystem\im-system\service\target\classes started by Fe in E:\JAVAnew\work\IMCommunicateSystem\im-system)
+2025-12-01 16:27:42 -The following 1 profile is active: "dev"
+2025-12-01 16:27:43 -Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-01 16:27:43 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-01 16:27:43 -Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+2025-12-01 16:27:44 -Tomcat initialized with port(s): 8000 (http)
+2025-12-01 16:27:44 -Initializing ProtocolHandler ["http-nio-8000"]
+2025-12-01 16:27:44 -Starting service [Tomcat]
+2025-12-01 16:27:44 -Starting Servlet engine: [Apache Tomcat/9.0.75]
+2025-12-01 16:27:44 -Initializing Spring embedded WebApplicationContext
+2025-12-01 16:27:44 -Root WebApplicationContext: initialization completed in 1291 ms
+2025-12-01 16:27:45 -Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'imFriendShipController': Unsatisfied dependency expressed through field 'imFriendShipService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'imFriendServiceImpl': Unsatisfied dependency expressed through field 'imUserService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'imUserServiceImpl': Unsatisfied dependency expressed through field 'callbackService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'callbackService': Unsatisfied dependency expressed through method 'callback' parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'java.lang.Integer' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2025-12-01 16:27:45 -Stopping service [Tomcat]
+2025-12-01 16:27:45 -
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-12-01 16:27:45 -
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method callback in com.lld.im.service.utils.CallbackService required a bean of type 'java.lang.Integer' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'java.lang.Integer' in your configuration.
+
+2025-12-01 16:31:58 -HV000001: Hibernate Validator 6.2.5.Final
+2025-12-01 16:31:58 -Starting ServiceApplication using Java 11.0.11 on LAPTOP-9LMH2RQN with PID 34300 (E:\JAVAnew\work\IMCommunicateSystem\im-system\service\target\classes started by Fe in E:\JAVAnew\work\IMCommunicateSystem\im-system)
+2025-12-01 16:31:58 -The following 1 profile is active: "dev"
+2025-12-01 16:31:59 -Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-01 16:31:59 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-01 16:31:59 -Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+2025-12-01 16:31:59 -Tomcat initialized with port(s): 8000 (http)
+2025-12-01 16:31:59 -Initializing ProtocolHandler ["http-nio-8000"]
+2025-12-01 16:31:59 -Starting service [Tomcat]
+2025-12-01 16:31:59 -Starting Servlet engine: [Apache Tomcat/9.0.75]
+2025-12-01 16:31:59 -Initializing Spring embedded WebApplicationContext
+2025-12-01 16:31:59 -Root WebApplicationContext: initialization completed in 686 ms
+2025-12-01 16:32:00 -Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'imFriendShipController': Unsatisfied dependency expressed through field 'imFriendShipService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'imFriendServiceImpl': Unsatisfied dependency expressed through field 'imUserService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'imUserServiceImpl': Unsatisfied dependency expressed through field 'callbackService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'callbackService': Unsatisfied dependency expressed through method 'callback' parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'java.lang.Integer' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2025-12-01 16:32:00 -Stopping service [Tomcat]
+2025-12-01 16:32:00 -
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-12-01 16:32:00 -
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method callback in com.lld.im.service.utils.CallbackService required a bean of type 'java.lang.Integer' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'java.lang.Integer' in your configuration.
+
+2025-12-01 16:32:41 -HV000001: Hibernate Validator 6.2.5.Final
+2025-12-01 16:32:41 -Starting ServiceApplication using Java 11.0.11 on LAPTOP-9LMH2RQN with PID 28708 (E:\JAVAnew\work\IMCommunicateSystem\im-system\service\target\classes started by Fe in E:\JAVAnew\work\IMCommunicateSystem\im-system)
+2025-12-01 16:32:41 -The following 1 profile is active: "dev"
+2025-12-01 16:32:42 -Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-01 16:32:42 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-01 16:32:42 -Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2025-12-01 16:32:42 -Tomcat initialized with port(s): 8000 (http)
+2025-12-01 16:32:42 -Initializing ProtocolHandler ["http-nio-8000"]
+2025-12-01 16:32:42 -Starting service [Tomcat]
+2025-12-01 16:32:42 -Starting Servlet engine: [Apache Tomcat/9.0.75]
+2025-12-01 16:32:42 -Initializing Spring embedded WebApplicationContext
+2025-12-01 16:32:42 -Root WebApplicationContext: initialization completed in 667 ms
+2025-12-01 16:32:43 -Starting ProtocolHandler ["http-nio-8000"]
+2025-12-01 16:32:43 -Tomcat started on port(s): 8000 (http) with context path ''
+2025-12-01 16:32:43 -Started ServiceApplication in 2.464 seconds (JVM running for 2.961)
+2025-12-01 20:58:17 -HV000001: Hibernate Validator 6.2.5.Final
+2025-12-01 20:58:17 -Starting ServiceApplication using Java 11.0.11 on LAPTOP-9LMH2RQN with PID 22828 (E:\JAVAnew\work\IMCommunicateSystem\im-system\service\target\classes started by Fe in E:\JAVAnew\work\IMCommunicateSystem\im-system)
+2025-12-01 20:58:17 -The following 1 profile is active: "dev"
+2025-12-01 20:58:18 -Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-01 20:58:18 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-01 20:58:19 -Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+2025-12-01 20:58:19 -Tomcat initialized with port(s): 8000 (http)
+2025-12-01 20:58:19 -Initializing ProtocolHandler ["http-nio-8000"]
+2025-12-01 20:58:19 -Starting service [Tomcat]
+2025-12-01 20:58:19 -Starting Servlet engine: [Apache Tomcat/9.0.75]
+2025-12-01 20:58:19 -Initializing Spring embedded WebApplicationContext
+2025-12-01 20:58:19 -Root WebApplicationContext: initialization completed in 1681 ms
+2025-12-01 20:58:21 -Starting ProtocolHandler ["http-nio-8000"]
+2025-12-01 20:58:21 -Tomcat started on port(s): 8000 (http) with context path ''
+2025-12-01 20:58:21 -Started ServiceApplication in 3.748 seconds (JVM running for 4.825)
+2025-12-01 21:00:55 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-01 21:00:55 -Initializing Servlet 'dispatcherServlet'
+2025-12-01 21:00:55 -Completed initialization in 1 ms

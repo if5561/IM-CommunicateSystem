@@ -1,0 +1,100 @@
+spring:
+  #数据库连接信息
+  profiles:
+    active: dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/im_core
+    username: root
+    password: 123456
+  main:
+    allow-circular-references: true
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    jedis:
+      pool:
+        max-active: 100
+        max-idle: 100
+        max-wait: 1000
+        min-idle: 10
+    password:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    addresses: localhost
+    username: guest
+    password: guest
+    #    virtual-host:
+    listener:
+      simple:
+        concurrency: 5
+        max-concurrency: 10
+        acknowledge-mode: MANUAL
+        prefetch: 1
+    publisher-confirm-type: CORRELATED
+    publisher-returns: true
+    template:
+      mandatory: true
+    cache:
+      connection:
+        mode: channel
+      channel:
+        size: 36
+        checkout-timeout: 0
+  application:
+    name: im-core
+
+# logger 配置
+logging:
+  config: classpath:logback-spring.xml
+
+server:
+  port: 8000
+
+appConfig:
+  privateKey: 123456
+  zkAddr: 127.0.0.1:2181 # zk连接地址
+  zkConnectTimeOut: 50000 #zk超时时间
+  imRouteWay: 1 # 路由策略1轮训 2随机 3hash
+  consistentHashWay: 1 # 如果选用一致性hash的话具体hash算法 1 TreeMap 2 自定义Map
+  sendMessageCheckFriend: true # 发送消息是否校验关系链
+  sendMessageCheckBlack: true # 发送消息是否校验黑名单
+  callbackUrl: http://127.0.0.1:8989/callback
+  modifyUserAfterCallback: true # 用户资料变更之后回调开关
+  addFriendAfterCallback: true # 添加好友之后回调开关
+  addFriendBeforeCallback: true # 添加好友之前回调开关
+  modifyFriendAfterCallback: true # 修改好友之后回调开关
+  deleteFriendAfterCallback: true # 删除好友之后回调开关
+  addFriendShipBlackAfterCallback: true #添加黑名单之后回调开关
+  deleteFriendShipBlackAfterCallback: true #删除黑名单之后回调开关
+  createGroupAfterCallback: true # 创建群聊之后回调开关
+  modifyGroupAfterCallback: true # 修改群聊之后回调开关
+  destroyGroupAfterCallback: true # 解散群聊之后回调开关
+  deleteGroupMemberAfterCallback: true # 删除群成员之后回调
+  addGroupMemberAfterCallback: true # 拉人入群之后回调
+  addGroupMemberBeforeCallback: true # 拉人入群之前回调
+  sendMessageAfterCallback: true # 发送单聊消息之后
+  sendMessageBeforeCallback: true # 发送单聊消息之前
+  sendGroupMessageAfterCallback: true # 发送群聊消息之后
+  sendGroupMessageBeforeCallback: true # 发送群聊消息之前
+  offlineMessageCount: 1000 #离线消息存储条数
+  deleteConversationSyncMode: 1 #1多段同步
+
+
+mybatis-plus:
+
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath*:mapper/*.xml
+  global-config:
+    db-config:
+      update-strategy: NOT_EMPTY
+
+httpclient:
+  maxTotal: 100
+  defaultMaxPerRoute: 50
+  connectTimeout: 2000
+  connectionRequestTimeout: 2000
+  socketTimeout: 5000
+  staleConnectionCheckEnabled: true
