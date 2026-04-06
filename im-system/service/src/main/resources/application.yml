@@ -44,6 +44,10 @@ spring:
         checkout-timeout: 0
   application:
     name: im-core
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
 
 # logger 配置
 logging:
@@ -98,3 +102,8 @@ httpclient:
   connectionRequestTimeout: 2000
   socketTimeout: 5000
   staleConnectionCheckEnabled: true
+
+im:
+  media:
+    upload-dir: ./uploads/images
+    access-url-prefix: /media/images

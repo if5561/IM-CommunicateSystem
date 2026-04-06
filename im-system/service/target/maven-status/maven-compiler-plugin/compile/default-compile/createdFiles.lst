@@ -1,0 +1,16 @@
+com\lld\im\service\media\model\ImageMessageBody.class
+com\lld\im\service\user\models\UserStatusChangeNotifyContent.class
+com\lld\im\service\user\models\req\PullFriendOnlineStatusReq.class
+com\lld\im\service\user\models\req\SubscribeUserOnlineStatusReq.class
+com\lld\im\service\media\controller\MediaController.class
+com\lld\im\service\user\models\req\PullUserOnlineStatusReq.class
+com\lld\im\service\user\mq\UserOnlineStatusReceiver$1.class
+com\lld\im\service\media\config\LocalMediaProperties.class
+com\lld\im\service\user\mq\UserOnlineStatusReceiver.class
+com\lld\im\service\media\model\UploadImageResp$UploadImageRespBuilder.class
+com\lld\im\service\user\models\resp\UserOnlineStatusResp.class
+com\lld\im\service\user\models\req\SetUserCustomerStatusReq.class
+com\lld\im\service\media\model\UploadImageResp.class
+com\lld\im\service\media\service\LocalImageStorageService.class
+com\lld\im\service\user\service\ImUserStatusService.class
+com\lld\im\service\user\service\impl\ImUserStatusServiceImpl.class

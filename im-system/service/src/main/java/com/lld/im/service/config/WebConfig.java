@@ -2,10 +2,12 @@ package com.lld.im.service.config;
 
 //import com.lld.im.service.interceptor.GateWayInterceptor;
 import com.lld.im.service.interceptor.GateWayInterceptor;
+import com.lld.im.service.media.config.LocalMediaProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
@@ -17,6 +19,9 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class WebConfig implements WebMvcConfigurer {
     @Autowired
     GateWayInterceptor gateWayInterceptor;
+
+    @Autowired
+    LocalMediaProperties localMediaProperties;
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
@@ -34,6 +39,12 @@ public class WebConfig implements WebMvcConfigurer {
                 .allowCredentials(true)
                 .maxAge(3600)
                 .allowedHeaders("*");
+    }
+
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler(localMediaProperties.getAccessUrlPrefix() + "/**")
+                .addResourceLocations(localMediaProperties.getResourceLocation());
     }
 
 

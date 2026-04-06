@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="im-message-store" />
         <module name="im-tcp" />
+        <module name="im-ai-service" />
         <module name="common" />
         <module name="service" />
         <module name="im-codec" />
@@ -19,6 +20,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="common" options="-parameters" />
+      <module name="im-ai-service" options="-parameters" />
       <module name="service" options="-parameters" />
     </option>
   </component>

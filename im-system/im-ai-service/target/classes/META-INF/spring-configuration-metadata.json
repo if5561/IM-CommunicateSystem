@@ -1,0 +1,42 @@
+{
+  "groups": [
+    {
+      "name": "im.ai",
+      "type": "com.lld.im.ai.config.AiModuleProperties",
+      "sourceType": "com.lld.im.ai.config.AiModuleProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "im.ai.default-top-k",
+      "type": "java.lang.Integer",
+      "sourceType": "com.lld.im.ai.config.AiModuleProperties",
+      "defaultValue": 5
+    },
+    {
+      "name": "im.ai.group-queue",
+      "type": "java.lang.String",
+      "sourceType": "com.lld.im.ai.config.AiModuleProperties",
+      "defaultValue": "im.ai.store-group.queue"
+    },
+    {
+      "name": "im.ai.max-summary-messages",
+      "type": "java.lang.Integer",
+      "sourceType": "com.lld.im.ai.config.AiModuleProperties",
+      "defaultValue": 200
+    },
+    {
+      "name": "im.ai.p2p-queue",
+      "type": "java.lang.String",
+      "sourceType": "com.lld.im.ai.config.AiModuleProperties",
+      "defaultValue": "im.ai.store-p2p.queue"
+    },
+    {
+      "name": "im.ai.search-candidate-limit",
+      "type": "java.lang.Integer",
+      "sourceType": "com.lld.im.ai.config.AiModuleProperties",
+      "defaultValue": 1000
+    }
+  ],
+  "hints": []
+}

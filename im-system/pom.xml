@@ -19,6 +19,7 @@
         <module>im-tcp</module>
         <module>im-codec</module>
         <module>im-message-store</module>
+        <module>im-ai-service</module>
     </modules>
     <properties>
         <java.version>11</java.version>

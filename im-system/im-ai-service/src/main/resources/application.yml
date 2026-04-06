@@ -1,0 +1,37 @@
+server:
+  port: 8091
+
+spring:
+  application:
+    name: im-ai-service
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: ${IM_AI_DB_URL:jdbc:postgresql://localhost:5432/im_ai}
+    username: ${IM_AI_DB_USERNAME:postgres}
+    password: ${IM_AI_DB_PASSWORD:postgres}
+  sql:
+    init:
+      mode: always
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY:test-key}
+      base-url: ${OPENAI_BASE_URL:https://api.openai.com}
+      chat:
+        options:
+          model: ${OPENAI_CHAT_MODEL:gpt-4.1-mini}
+      embedding:
+        options:
+          model: ${OPENAI_EMBEDDING_MODEL:text-embedding-3-small}
+
+im:
+  ai:
+    p2p-queue: im.ai.store-p2p.queue
+    group-queue: im.ai.store-group.queue
+    default-top-k: 5
+    max-summary-messages: 200
+    search-candidate-limit: 1000
